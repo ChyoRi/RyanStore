@@ -1,0 +1,62 @@
+@charset 'utf-8';
+
+@import './variable.scss';
+@import './common.scss';
+
+h1 {
+    @include flex(center);
+    height: 100%;
+
+    & > a {
+        @include flex();
+
+        & >img {
+            margin-right: 30px;
+        }
+
+        & > h2 {
+            font-family: 'Geometria-Bold';
+            font-size: 42px;
+        }
+    }
+}
+
+.list {
+    margin-right: 20px;
+
+    & > .list_back {
+        @include backGroound(url('../images/heart.png'));
+        width: 125px;
+        height: 90px;
+        margin-bottom: 20px;
+    }
+
+    & > strong {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.util {
+    @include flex(space-between);
+
+    & > li {
+        
+        & > a {
+            display: block;
+            padding: 25px;
+            border: $border_color_black;
+        }
+        
+        &:first-of-type {
+            @include backGroound(url('../images/user.svg'));
+            margin-right: 20px;
+        }
+
+        &:last-of-type {
+            @include backGroound(url('../images/basket.svg'));
+        }
+
+    }
+}
